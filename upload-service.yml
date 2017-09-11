@@ -1,0 +1,41 @@
+accessKeyId: rkRdcwRdaAu/UKIE3639VreGf8DZwp+alz8YdpFo
+secretAccessKey: AKIAJJF72ZRSMJ5RAM2A
+
+   
+management:
+  security:
+    enabled: false
+
+
+server:
+  port: 8084
+
+spring:
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/ingest
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+      
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+    
+
+    

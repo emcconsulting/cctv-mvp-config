@@ -1,0 +1,23 @@
+management:
+  security:
+    enabled: false
+
+server:
+  port: 8090
+  
+
+ingest:
+   url: http://localhost:8084
+process:
+   url: http://localhost:8085
+publish:
+   url: http://localhost:8086
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost

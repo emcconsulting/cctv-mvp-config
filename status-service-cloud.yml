@@ -1,0 +1,19 @@
+ingest:
+   url: http://upload-mvp.cfapps.io
+process:
+   url: http://metadata-process-mvp.cfapps.io
+publish:
+   url: http://publish-mvp.cfapps.io
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    leaseRenewalIntervalInSeconds: 30  
+    
+management:
+  security:
+    enabled: false
+

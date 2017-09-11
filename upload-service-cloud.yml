@@ -1,0 +1,24 @@
+accessKeyId: rkRdcwRdaAu/UKIE3639VreGf8DZwp+alz8YdpFo
+secretAccessKey: AKIAJJF72ZRSMJ5RAM2A
+
+   
+management:
+  security:
+    enabled: false
+
+
+spring:
+  profiles: cloud 
+     
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    leaseRenewalIntervalInSeconds: 30  
+ 
+
+    
+
+    
