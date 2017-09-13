@@ -1,3 +1,14 @@
+
+
+spring:
+  zipkin:
+    baseUrl: ${vcap.services.zipkin.credentials.url}
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+
 ingest:
    url: ${vcap.services.ingest.credentials.url}
 process:
