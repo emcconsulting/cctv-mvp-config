@@ -21,6 +21,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
+  zipkin:
+    baseUrl: ${vcap.services.zipkin.credentials.url}
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 
     
