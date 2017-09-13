@@ -3,9 +3,6 @@ management:
     enabled: false
 
 
-server:
-  port: 8084
-
 spring:
     
   datasource:
