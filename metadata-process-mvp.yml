@@ -1,0 +1,16 @@
+management:
+  security:
+    enabled: false
+    
+security:
+  basic:
+    enabled: false
+
+spring:
+  zipkin:
+    baseUrl: ${vcap.services.zipkin.credentials.url}
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+    
