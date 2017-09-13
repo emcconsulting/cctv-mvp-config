@@ -1,0 +1,6 @@
+ingest:
+   url: ${vcap.services.ingest.credentials.url}
+process:
+   url: ${vcap.services.process.credentials.url}
+publish:
+   url: ${vcap.services.publish.credentials.url}
