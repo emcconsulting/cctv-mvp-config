@@ -1,19 +1,17 @@
+
+
+spring:
+  zipkin:
+    baseUrl: ${vcap.services.zipkin.credentials.url}
+    enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+
 ingest:
-   url: http://upload-mvp.cfapps.io
+   url: ${vcap.services.ingest.credentials.url}
 process:
-   url: http://metadata-process-mvp.cfapps.io
+   url: ${vcap.services.process.credentials.url}
 publish:
-   url: http://publish-mvp.cfapps.io
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:${eureka.password:}@${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
-  instance:
-    hostname: ${vcap.application.uris[0]}
-    leaseRenewalIntervalInSeconds: 30  
-    
-management:
-  security:
-    enabled: false
-
+   url: ${vcap.services.publish.credentials.url}
