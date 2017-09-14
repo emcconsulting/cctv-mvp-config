@@ -2,6 +2,7 @@ management:
   security:
     enabled: false
 
+limit: 3
 
 spring:
   profiles: cloud 
